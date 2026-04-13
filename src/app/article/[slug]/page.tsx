@@ -7,7 +7,8 @@ import { MarkdownRenderer } from "@/components/article/markdown-renderer";
 import { VoteButton } from "@/components/article/vote-button";
 import { CommentSection } from "@/components/article/comment-section";
 import { CopyButton } from "@/components/article/copy-button";
-import type { Article } from "@/types";
+import { Sidebar } from "@/components/layout/sidebar";
+import type { Article, Product } from "@/types";
 
 const productStyles: Record<string, { bg: string; label: string }> = {
   line: { bg: "bg-green-500/10 text-green-400 border-green-500/20", label: "LINE Harness" },
@@ -69,8 +70,11 @@ export default function ArticlePage({
   const product = productStyles[article.product] || productStyles.all;
 
   return (
-    <div className="mx-auto max-w-3xl py-8">
-      <article className="flex flex-col">
+    <div className="flex gap-8">
+      {article.product !== "all" && (
+        <Sidebar product={article.product as Product} currentSlug={article.slug} />
+      )}
+      <article className="mx-auto min-w-0 max-w-3xl flex-1 py-8 flex flex-col">
         {/* Meta bar */}
         <div className="flex flex-wrap items-center gap-2 text-sm">
           <span

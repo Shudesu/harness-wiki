@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ArticleList } from "@/components/article/article-list";
+import { Sidebar } from "@/components/layout/sidebar";
 
 export const metadata: Metadata = {
   title: "IG Harness",
@@ -8,14 +9,17 @@ export const metadata: Metadata = {
 
 export default function IgPage() {
   return (
-    <div className="flex flex-col gap-6">
-      <div>
-        <h1 className="text-3xl font-bold">IG Harness</h1>
-        <p className="mt-2 text-zinc-400">
-          Instagram DM自動化。コメントトリガー・エンゲージメントゲート・LINE連携。
-        </p>
+    <div className="flex gap-8">
+      <Sidebar product="ig" />
+      <div className="min-w-0 flex-1">
+        <div className="mb-8">
+          <h1 className="text-3xl font-bold">IG Harness</h1>
+          <p className="mt-2 text-zinc-400">
+            Instagram DM自動化。コメントトリガー・エンゲージメントゲート。
+          </p>
+        </div>
+        <ArticleList product="ig" />
       </div>
-      <ArticleList product="ig" />
     </div>
   );
 }
