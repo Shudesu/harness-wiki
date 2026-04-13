@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { AuthProvider } from "@/components/auth/auth-provider";
 import { Header } from "@/components/layout/header";
 import { BottomNav } from "@/components/layout/bottom-nav";
+import { Footer } from "@/components/layout/footer";
 import "./globals.css";
 
 const SITE_URL =
@@ -29,12 +30,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja">
-      <body className="min-h-screen bg-zinc-950 text-zinc-100 antialiased">
+      <body className="min-h-screen overflow-x-hidden bg-zinc-950 text-zinc-100 antialiased">
         <AuthProvider>
           <Header />
-          <main className="mx-auto max-w-5xl px-4 pb-20 pt-16">
-            {children}
-          </main>
+          <main className="pt-14">{children}</main>
+          <Footer />
           <BottomNav />
         </AuthProvider>
         <script

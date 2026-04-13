@@ -33,7 +33,7 @@ const products = [
 
 export default function GettingStartedPage() {
   return (
-    <div className="flex flex-col gap-8">
+    <div className="mx-auto max-w-5xl px-4 pb-20 flex flex-col gap-8">
       <div>
         <h1 className="text-3xl font-bold">はじめに</h1>
         <p className="mt-2 text-zinc-400">どのHarnessから始めますか？</p>

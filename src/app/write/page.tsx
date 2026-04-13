@@ -79,7 +79,7 @@ export default function WritePage() {
   };
 
   return (
-    <div className="flex flex-col gap-6">
+    <div className="mx-auto max-w-3xl px-4 pb-20 flex flex-col gap-6">
       <h1 className="text-2xl font-bold">記事を投稿</h1>
 
       <input

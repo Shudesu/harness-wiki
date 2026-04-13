@@ -33,7 +33,7 @@ const paths = [
 
 export default function WelcomePage() {
   return (
-    <div className="mx-auto flex max-w-2xl flex-col items-center gap-10 py-12 sm:py-20">
+    <div className="mx-auto flex max-w-2xl px-4 pb-20 flex-col items-center gap-10 py-12 sm:py-20">
       <div className="text-center">
         <h1 className="text-3xl font-bold tracking-tight">
           あなたはどのタイプ？

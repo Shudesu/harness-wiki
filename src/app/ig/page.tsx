@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function IgPage() {
   return (
-    <div className="flex gap-8">
+    <div className="mx-auto flex max-w-5xl gap-8 px-4 pb-20">
       <Sidebar product="ig" />
       <div className="min-w-0 flex-1">
         <div className="mb-8">

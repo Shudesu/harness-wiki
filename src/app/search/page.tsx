@@ -25,7 +25,7 @@ export default function SearchPage() {
   };
 
   return (
-    <div className="flex flex-col gap-6">
+    <div className="mx-auto max-w-5xl px-4 pb-20 flex flex-col gap-6">
       <h1 className="text-2xl font-bold">検索</h1>
 
       <div className="flex gap-2">

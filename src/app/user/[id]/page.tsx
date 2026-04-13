@@ -56,7 +56,7 @@ export default function UserPage({
   }
 
   return (
-    <div className="flex flex-col gap-8">
+    <div className="mx-auto max-w-5xl px-4 pb-20 flex flex-col gap-8">
       <div className="flex items-center gap-4">
         <img
           src={profile.avatarUrl}
