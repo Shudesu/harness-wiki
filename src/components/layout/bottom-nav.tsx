@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Home, Search, PenSquare, User } from "lucide-react";
+import { Home, Search, MessageSquare, User } from "lucide-react";
 import { useAuth } from "@/components/auth/auth-provider";
 
 export function BottomNav() {
@@ -12,7 +12,7 @@ export function BottomNav() {
   const items = [
     { icon: Home, label: "ホーム", href: "/" },
     { icon: Search, label: "検索", href: "/search" },
-    { icon: PenSquare, label: "投稿", href: "/write" },
+    { icon: MessageSquare, label: "掲示板", href: "/community" },
     {
       icon: User,
       label: "マイページ",

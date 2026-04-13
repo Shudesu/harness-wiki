@@ -54,11 +54,19 @@ export async function GET(request: NextRequest) {
   const url = new URL(request.url);
   const product = url.searchParams.get("product");
   const category = url.searchParams.get("category");
+  const type = url.searchParams.get("type");
   const limit = url.searchParams.get("limit") || "50";
   const search = url.searchParams.get("q");
 
   let sql = "SELECT * FROM articles WHERE status IN ('published', 'pinned')";
   const params: string[] = [];
+
+  if (type) {
+    sql += " AND type = ?";
+    params.push(type);
+  } else {
+    sql += " AND (type = 'article' OR type IS NULL)";
+  }
 
   if (product) {
     sql += " AND product = ?";
@@ -104,11 +112,12 @@ export async function POST(request: NextRequest) {
   const authorAvatar = body.authorAvatar as string;
   const tags = body.tags as string[];
   const status = body.status as string;
+  const type = (body.type as string) || "article";
 
   const result = await db
     .prepare(
-      `INSERT INTO articles (title, slug, category, product, body, cover_image, author_id, author_name, author_avatar, tags, status)
-     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+      `INSERT INTO articles (title, slug, category, product, body, cover_image, author_id, author_name, author_avatar, tags, status, type)
+     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
      RETURNING *`
     )
     .bind(
@@ -122,7 +131,8 @@ export async function POST(request: NextRequest) {
       authorName,
       authorAvatar,
       JSON.stringify(tags || []),
-      status || "published"
+      status || "published",
+      type
     )
     .first<ArticleRow>();
 

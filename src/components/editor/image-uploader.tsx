@@ -8,6 +8,32 @@ interface ImageUploaderProps {
   onUpload: (url: string) => void;
 }
 
+async function compressImage(file: File, maxWidth = 800): Promise<File> {
+  return new Promise((resolve) => {
+    const img = new Image();
+    img.onload = () => {
+      const canvas = document.createElement("canvas");
+      const ratio = Math.min(maxWidth / img.width, 1);
+      canvas.width = img.width * ratio;
+      canvas.height = img.height * ratio;
+      const ctx = canvas.getContext("2d")!;
+      ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+      canvas.toBlob(
+        (blob) => {
+          resolve(
+            new File([blob!], file.name.replace(/\.\w+$/, ".webp"), {
+              type: "image/webp",
+            })
+          );
+        },
+        "image/webp",
+        0.7
+      );
+    };
+    img.src = URL.createObjectURL(file);
+  });
+}
+
 export function ImageUploader({ onUpload }: ImageUploaderProps) {
   const [uploading, setUploading] = useState(false);
 
@@ -16,7 +42,8 @@ export function ImageUploader({ onUpload }: ImageUploaderProps) {
       if (!file.type.startsWith("image/")) return;
       setUploading(true);
       try {
-        const url = await uploadImage(file);
+        const compressed = await compressImage(file);
+        const url = await uploadImage(compressed);
         onUpload(url);
       } finally {
         setUploading(false);
