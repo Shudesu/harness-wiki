@@ -1,0 +1,13 @@
+name = "harness-wiki"
+compatibility_date = "2024-12-01"
+compatibility_flags = ["nodejs_compat"]
+pages_build_output_dir = ".vercel/output/static"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "harness-wiki"
+database_id = "7432478f-eed5-4533-b28b-15ec55bbd4ea"
+
+[[r2_buckets]]
+binding = "WIKI_IMAGES"
+bucket_name = "harness-wiki-images"

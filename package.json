@@ -1,0 +1,36 @@
+{
+  "name": "harness-wiki",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "pages:build": "npx @cloudflare/next-on-pages",
+    "preview": "pnpm pages:build && npx wrangler pages dev .vercel/output/static",
+    "deploy": "pnpm pages:build && npx wrangler pages deploy .vercel/output/static --project-name harness-wiki",
+    "lint": "next lint",
+    "db:migrate": "npx wrangler d1 execute harness-wiki --file=schema.sql",
+    "db:migrate:local": "npx wrangler d1 execute harness-wiki --local --file=schema.sql"
+  },
+  "dependencies": {
+    "next": "^15.1.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "firebase": "^11.0.0",
+    "react-markdown": "^9.0.0",
+    "remark-gfm": "^4.0.0",
+    "rehype-highlight": "^7.0.0",
+    "lucide-react": "^0.400.0"
+  },
+  "devDependencies": {
+    "@cloudflare/next-on-pages": "^1.13.0",
+    "@cloudflare/workers-types": "^4.0.0",
+    "typescript": "^5.7.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "tailwindcss": "^4.0.0",
+    "@tailwindcss/postcss": "^4.0.0",
+    "postcss": "^8.5.0",
+    "wrangler": "^4.0.0"
+  }
+}
