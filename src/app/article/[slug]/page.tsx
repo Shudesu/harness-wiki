@@ -70,11 +70,11 @@ export default function ArticlePage({
   const product = productStyles[article.product] || productStyles.all;
 
   return (
-    <div className="flex gap-8">
+    <div className="mx-auto flex max-w-5xl gap-8 px-4 pb-20">
       {article.product !== "all" && (
         <Sidebar product={article.product as Product} currentSlug={article.slug} />
       )}
-      <article className="mx-auto min-w-0 max-w-3xl flex-1 py-8 flex flex-col">
+      <article className="min-w-0 max-w-3xl flex-1 py-8 flex flex-col">
         {/* Meta bar */}
         <div className="flex flex-wrap items-center gap-2 text-sm">
           <span
