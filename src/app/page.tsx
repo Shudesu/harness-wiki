@@ -39,7 +39,7 @@ const products = [
 
 export default function Home() {
   return (
-    <div className="noise-bg gradient-mesh relative flex h-[calc(100dvh-4rem)] flex-col items-center justify-center gap-8 px-4">
+    <div className="noise-bg gradient-mesh relative flex h-[calc(100dvh-5rem)] flex-col items-center justify-center gap-8 px-4">
       {/* Hero — 1行 */}
       <div className="animate-reveal animate-reveal-1 flex flex-col items-center gap-3 text-center">
         <h1 className="whitespace-nowrap text-4xl font-extrabold tracking-tight sm:text-6xl">

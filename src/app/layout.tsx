@@ -33,7 +33,7 @@ export default function RootLayout({
       <body className="min-h-screen overflow-x-hidden bg-zinc-950 text-zinc-100 antialiased">
         <AuthProvider>
           <Header />
-          <main className="pt-16">{children}</main>
+          <main className="pt-20">{children}</main>
           <Footer />
           <BottomNav />
         </AuthProvider>
