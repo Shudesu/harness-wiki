@@ -26,7 +26,7 @@ const paths = [
     icon: MessageSquare,
     title: "導入を相談したい",
     description: "セットアップ代行や運用サポートについて。",
-    href: "https://x.com/shudesu_ai",
+    href: "https://x.com/ai_shunoda",
     color: "border-violet-500/30 hover:border-violet-500 text-violet-400",
   },
 ] as const;
