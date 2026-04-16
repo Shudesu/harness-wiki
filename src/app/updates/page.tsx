@@ -50,17 +50,20 @@ async function gh<T>(url: string): Promise<T | null> {
 }
 
 async function loadRepoData(owner: string, name: string) {
-  const [releases, issuesRaw] = await Promise.all([
+  // Use dedicated endpoints so open-issue and PR lists don't compete for the same page window
+  const [releases, openIssuesRaw, prsRaw] = await Promise.all([
     gh<Release[]>(`https://api.github.com/repos/${owner}/${name}/releases?per_page=3`),
-    gh<Issue[]>(`https://api.github.com/repos/${owner}/${name}/issues?state=all&per_page=30&sort=updated`),
+    gh<Issue[]>(`https://api.github.com/repos/${owner}/${name}/issues?state=open&per_page=10&sort=updated`),
+    gh<Issue[]>(`https://api.github.com/search/issues?q=repo:${owner}/${name}+type:pr&sort=updated&order=desc&per_page=10`).then(
+      (r) => (r as unknown as { items?: Issue[] } | null)?.items ?? null,
+    ),
   ]);
-  const all = issuesRaw ?? [];
-  const issues = all.filter((i) => !i.pull_request);
-  const prs = all.filter((i) => i.pull_request);
+  const openIssues = (openIssuesRaw ?? []).filter((i) => !i.pull_request).slice(0, 5);
+  const recentPrs = (prsRaw ?? []).slice(0, 5);
   return {
     latestRelease: releases?.[0] ?? null,
-    openIssues: issues.filter((i) => i.state === "open").slice(0, 5),
-    recentPrs: prs.slice(0, 5),
+    openIssues,
+    recentPrs,
   };
 }
 

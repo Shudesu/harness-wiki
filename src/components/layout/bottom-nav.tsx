@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Home, Search, MessageSquare, User } from "lucide-react";
+import { Home, Search, MessageSquare, Bell, User } from "lucide-react";
 import { useAuth } from "@/components/auth/auth-provider";
 
 export function BottomNav() {
@@ -13,6 +13,7 @@ export function BottomNav() {
     { icon: Home, label: "ホーム", href: "/" },
     { icon: Search, label: "検索", href: "/search" },
     { icon: MessageSquare, label: "掲示板", href: "/community" },
+    { icon: Bell, label: "更新", href: "/updates" },
     {
       icon: User,
       label: "マイページ",
