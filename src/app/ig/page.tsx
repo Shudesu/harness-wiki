@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { GroupedArticleList } from "@/components/article/grouped-article-list";
+import { DocsContents } from "@/components/article/docs-contents";
 import { Sidebar } from "@/components/layout/sidebar";
 
 export const metadata: Metadata = {
@@ -18,7 +18,7 @@ export default function IgPage() {
             Instagram DM自動化。コメントトリガー・エンゲージメントゲート。
           </p>
         </div>
-        <GroupedArticleList product="ig" />
+        <DocsContents product="ig" />
       </div>
     </div>
   );

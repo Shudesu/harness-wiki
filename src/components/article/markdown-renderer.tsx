@@ -1,5 +1,6 @@
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import rehypeSlug from "rehype-slug";
 
 export function MarkdownRenderer({ content }: { content: string }) {
   return (
@@ -40,7 +41,7 @@ export function MarkdownRenderer({ content }: { content: string }) {
       "
       style={{ fontFamily: "var(--font-body)" }}
     >
-      <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>
+      <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeSlug]}>{content}</ReactMarkdown>
     </div>
   );
 }

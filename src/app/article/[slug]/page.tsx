@@ -8,6 +8,8 @@ import { VoteButton } from "@/components/article/vote-button";
 import { CommentSection } from "@/components/article/comment-section";
 import { CopyButton } from "@/components/article/copy-button";
 import { Sidebar } from "@/components/layout/sidebar";
+import { Toc } from "@/components/article/toc";
+import Link from "next/link";
 import type { Article, Product } from "@/types";
 
 const productStyles: Record<string, { bg: string; label: string }> = {
@@ -70,11 +72,30 @@ export default function ArticlePage({
   const product = productStyles[article.product] || productStyles.all;
 
   return (
-    <div className="mx-auto flex max-w-5xl gap-8 px-4 pb-20">
+    <div className="mx-auto flex max-w-7xl gap-8 px-4 pb-20">
       {article.product !== "all" && (
         <Sidebar product={article.product as Product} currentSlug={article.slug} />
       )}
       <article className="min-w-0 max-w-3xl flex-1 py-8 flex flex-col">
+        {/* Breadcrumb */}
+        <nav className="mb-4 flex flex-wrap items-center gap-1.5 text-[13px] text-zinc-500">
+          <Link href="/" className="hover:text-zinc-300">Home</Link>
+          <span>/</span>
+          {article.product !== "all" && (
+            <>
+              <Link href={`/${article.product}`} className="hover:text-zinc-300">
+                {product.label}
+              </Link>
+              <span>/</span>
+            </>
+          )}
+          <span className="text-zinc-400">
+            {categoryLabels[article.category] || article.category}
+          </span>
+          <span>/</span>
+          <span className="truncate text-zinc-300">{article.title}</span>
+        </nav>
+
         {/* Meta bar */}
         <div className="flex flex-wrap items-center gap-2 text-sm">
           <span
@@ -162,6 +183,7 @@ export default function ArticlePage({
           <CommentSection articleId={article.id} />
         </div>
       </article>
+      <Toc markdown={article.body} />
     </div>
   );
 }

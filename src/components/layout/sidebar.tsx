@@ -28,11 +28,30 @@ export function Sidebar({ product, currentSlug }: SidebarProps) {
     all: "text-zinc-400",
   }[product];
 
+  // Sort: pinned first, then series #N ascending, then newest.
+  const sortForSidebar = (items: Article[]) =>
+    [...items].sort((a, b) => {
+      if (a.status !== b.status) {
+        if (a.status === "pinned") return -1;
+        if (b.status === "pinned") return 1;
+      }
+      const sa = a.title.match(/#(\d+)/);
+      const sb = b.title.match(/#(\d+)/);
+      const na = sa ? Number(sa[1]) : Number.POSITIVE_INFINITY;
+      const nb = sb ? Number(sb[1]) : Number.POSITIVE_INFINITY;
+      if (na !== nb) return na - nb;
+      return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
+    });
+
   const grouped = {
-    "getting-started": articles.filter((a) => a.category === "getting-started"),
-    changelog: articles.filter((a) => a.category === "changelog"),
-    other: articles.filter(
-      (a) => a.category !== "getting-started" && a.category !== "changelog"
+    "getting-started": sortForSidebar(
+      articles.filter((a) => a.category === "getting-started"),
+    ),
+    changelog: sortForSidebar(articles.filter((a) => a.category === "changelog")),
+    other: sortForSidebar(
+      articles.filter(
+        (a) => a.category !== "getting-started" && a.category !== "changelog",
+      ),
     ),
   };
 
