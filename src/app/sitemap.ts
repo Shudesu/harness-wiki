@@ -20,5 +20,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.7,
     },
+    {
+      url: `${BASE_URL}/use-cases`,
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
   ];
 }
