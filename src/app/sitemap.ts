@@ -37,7 +37,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const db = getRequestContext().env.DB;
     const { results } = await db
       .prepare(
-        "SELECT slug, updated_at FROM articles WHERE status IN ('published', 'pinned') ORDER BY updated_at DESC"
+        "SELECT slug, updated_at FROM articles WHERE status IN ('published', 'pinned') AND (type = 'article' OR type IS NULL) ORDER BY updated_at DESC"
       )
       .all<{ slug: string; updated_at: string }>();
     articlePages = (results ?? []).map((row) => ({
