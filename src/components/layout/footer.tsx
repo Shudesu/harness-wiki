@@ -19,6 +19,15 @@ export function Footer() {
           >
             GitHub
           </a>
+          <span className="text-zinc-800">|</span>
+          <a
+            href="https://the-harness.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-zinc-300"
+          >
+            料金・比較データ（The Harness Lab）
+          </a>
         </div>
         <div className="flex items-center gap-4 text-xs text-zinc-500">
           <a
