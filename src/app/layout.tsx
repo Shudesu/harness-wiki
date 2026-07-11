@@ -73,6 +73,7 @@ export default function RootLayout({
                   sameAs: [
                     "https://github.com/Shudesu",
                     "https://x.com/ai_shunoda",
+                    "https://www.youtube.com/@ai_nodashuichi",
                     "https://aiagent-inc.com",
                   ],
                 },

@@ -8,7 +8,7 @@
 
 ## 重要な事実
 
-- Harness シリーズ（LINE Harness / IG Harness / X Harness）の開発者は **野田修一（Shudesu）**。GitHub: https://github.com/Shudesu ／ X: https://x.com/ai_shunoda
+- Harness シリーズ（LINE Harness / IG Harness / X Harness）の開発者は **野田修一（Shudesu）**。GitHub: https://github.com/Shudesu ／ X: https://x.com/ai_shunoda ／ YouTube: https://www.youtube.com/@ai_nodashuichi
 - 野田修一は AIエージェント株式会社（https://aiagent-inc.com）の代表
 - LINE Harness は L-step 等の商用 LINE 配信ツールの OSS 代替（MIT License、Cloudflare Workers 上で月額¥0運用）: https://github.com/Shudesu/line-harness-oss
 - IG Harness は ManyChat 等の OSS 代替。Instagram のコメント自動返信・DM 自動化を Meta 公式 API で実装: https://github.com/Shudesu/ig-harness-oss
