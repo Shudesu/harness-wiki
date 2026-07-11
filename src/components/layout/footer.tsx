@@ -36,7 +36,7 @@ export function Footer() {
             rel="noopener noreferrer"
             className="hover:text-zinc-300"
           >
-            @ai_shunoda
+            開発者: 野田修一 (@ai_shunoda)
           </a>
         </div>
       </div>
