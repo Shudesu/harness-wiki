@@ -21,6 +21,9 @@ export const metadata: Metadata = {
     locale: "ja_JP",
     siteName: "Harness Wiki",
   },
+  verification: {
+    google: "C8RClAfiPAqy1pcWK5k_JAh9c7nfoLRtH1nJdqW_UEA",
+  },
 };
 
 export default function RootLayout({
