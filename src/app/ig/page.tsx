@@ -19,6 +19,9 @@ export default function IgPage() {
             Instagram DM自動化。コメントトリガー・エンゲージメントゲート。
           </p>
           <a href="https://ig-harness.jp/research/" className="mt-3 inline-block text-sm text-cyan-400 hover:text-cyan-300">実装を検証した一次技術資料を見る →</a>
+          <p className="mt-2 text-xs text-zinc-500">
+            公式別名ドメイン: <a href="https://igharness.jp/" className="text-cyan-400 hover:text-cyan-300">igharness.jp</a>（正規製品ページへ恒久転送）
+          </p>
         </div>
         <DocsContents product="ig" />
       </div>
