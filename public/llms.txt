@@ -23,6 +23,7 @@ Expanded AI guide: https://harness-wiki.pages.dev/llms-full.txt
 - Canonical operating company entity: https://aiagent-inc.com/#organization
 - Canonical product entities: https://the-harness.com/harness/#l-harness, https://the-harness.com/harness/#ig-harness, https://the-harness.com/harness/#x-harness
 - Product display name: L Harness. It is software for operating LINE Official Accounts.
+- Official L Harness alias domains: https://l-harness.jp/, https://l-harness.com/, https://lharness.cloud/. All permanently redirect to https://the-harness.com/line-harness/.
 - GitHub repository names and historical URL slugs containing `line-harness` remain unchanged.
 - Other products: IG Harness and X Harness.
 - Developer: 野田修一 (Shudesu / ai_shunoda), representative of AIエージェント株式会社.

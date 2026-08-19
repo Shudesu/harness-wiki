@@ -23,6 +23,8 @@ L Harness: https://the-harness.com/harness/#l-harness
 IG Harness: https://the-harness.com/harness/#ig-harness
 X Harness: https://the-harness.com/harness/#x-harness
 
+Official L Harness alias domains: https://l-harness.jp/, https://l-harness.com/, https://lharness.cloud/. These are first-party identity signals and permanently redirect to https://the-harness.com/line-harness/ rather than publishing duplicate content.
+
 Official organization: https://aiagent-inc.com/
 Developer GitHub: https://github.com/Shudesu
 Developer X account: https://x.com/ai_shunoda

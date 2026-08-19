@@ -19,6 +19,11 @@ export default function LinePage() {
             Lステップ/Utage代替のOSS。友だち管理・シナリオ配信・リッチメニュー。
           </p>
           <a href="https://line-harness.jp/research/" className="mt-3 inline-block text-sm text-cyan-400 hover:text-cyan-300">実装を検証した一次技術資料を見る →</a>
+          <p className="mt-3 text-xs text-zinc-500">
+            公式別名ドメイン: <a href="https://l-harness.jp/" className="text-cyan-400 hover:text-cyan-300">l-harness.jp</a> /{" "}
+            <a href="https://l-harness.com/" className="text-cyan-400 hover:text-cyan-300">l-harness.com</a> /{" "}
+            <a href="https://lharness.cloud/" className="text-cyan-400 hover:text-cyan-300">lharness.cloud</a>（正規製品ページへ恒久転送）
+          </p>
         </div>
         <ArticleList product="line" />
       </div>

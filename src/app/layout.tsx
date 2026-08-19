@@ -111,6 +111,11 @@ export default function RootLayout({
                   license: "https://opensource.org/licenses/MIT",
                   url: "https://the-harness.com/line-harness/",
                   codeRepository: "https://github.com/Shudesu/line-harness-oss",
+                  sameAs: [
+                    "https://l-harness.jp/",
+                    "https://l-harness.com/",
+                    "https://lharness.cloud/",
+                  ],
                   brand: { "@id": HARNESS_BRAND_ID },
                   creator: { "@id": PERSON_ID },
                   publisher: { "@id": ORGANIZATION_ID },
