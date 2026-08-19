@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArticleList } from "@/components/article/article-list";
+import { SITE_URL } from "@/lib/research";
 
 export const metadata: Metadata = {
   title: "はじめに",
   description: "LINE, X, IG Harness の導入ガイド。5分でセットアップ。",
+  alternates: { canonical: `${SITE_URL}/getting-started` },
 };
 
 const products = [

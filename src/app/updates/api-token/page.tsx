@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ChevronLeft, ShieldCheck, KeyRound, AlertTriangle } from "lucide-react";
+import { SITE_URL } from "@/lib/research";
 
 export const metadata: Metadata = {
   title: "CF API トークンの作り方",
   description:
     "L Harness のダッシュボードからアップデートを実行するための Cloudflare API トークンの作成手順",
+  alternates: { canonical: `${SITE_URL}/updates/api-token` },
 };
 
 export default function UpdatesApiTokenPage() {

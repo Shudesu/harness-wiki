@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Rocket, BookOpen, MessageSquare } from "lucide-react";
+import { SITE_URL } from "@/lib/research";
 
 export const metadata: Metadata = {
   title: "はじめての方へ",
   description: "Harness を使い始めるための最初のステップ",
+  alternates: { canonical: `${SITE_URL}/welcome` },
 };
 
 const paths = [

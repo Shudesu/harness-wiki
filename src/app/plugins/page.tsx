@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import { ArticleList } from "@/components/article/article-list";
+import { SITE_URL } from "@/lib/research";
 
 export const metadata: Metadata = {
   title: "プラグイン",
   description: "Harness プラグインカタログ。外部サービス連携を追加。",
+  alternates: { canonical: `${SITE_URL}/plugins` },
 };
 
 export default function PluginsPage() {

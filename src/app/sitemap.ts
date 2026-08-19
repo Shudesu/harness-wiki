@@ -14,7 +14,10 @@ const STATIC_PAGES: MetadataRoute.Sitemap = [
   { url: `${BASE_URL}/research`, changeFrequency: "weekly", priority: 0.9 },
   { url: `${BASE_URL}/welcome`, changeFrequency: "monthly", priority: 0.8 },
   { url: `${BASE_URL}/updates`, changeFrequency: "weekly", priority: 0.7 },
-  { url: `${BASE_URL}/search`, changeFrequency: "weekly", priority: 0.5 },
+  { url: `${BASE_URL}/updates/api-token`, changeFrequency: "monthly", priority: 0.6 },
+  { url: `${BASE_URL}/updates/manual`, changeFrequency: "monthly", priority: 0.6 },
+  { url: `${BASE_URL}/updates/migration-policy`, changeFrequency: "monthly", priority: 0.6 },
+  { url: `${BASE_URL}/updates/troubleshooting`, changeFrequency: "monthly", priority: 0.6 },
   {
     url: `${BASE_URL}/getting-started`,
     changeFrequency: "weekly",

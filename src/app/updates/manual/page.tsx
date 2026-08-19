@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ChevronLeft, AlertTriangle, GitBranch, Terminal } from "lucide-react";
+import { SITE_URL } from "@/lib/research";
 
 export const metadata: Metadata = {
   title: "手動アップデート (改造済みユーザー向け)",
   description:
     "L Harness を改造 (fork) して使っている人向けの手動アップデート手順",
+  alternates: { canonical: `${SITE_URL}/updates/manual` },
 };
 
 export default function UpdatesManualPage() {

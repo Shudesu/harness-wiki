@@ -12,11 +12,13 @@ import {
   KeyRound,
   ShieldCheck,
 } from "lucide-react";
+import { SITE_URL } from "@/lib/research";
 
 export const metadata: Metadata = {
   title: "L Harness のアップデート",
   description:
     "L Harness を最新版にアップデートする方法・トラブル時の対処・破壊的変更のポリシー",
+  alternates: { canonical: `${SITE_URL}/updates` },
 };
 
 // Revalidate every hour (GitHub API rate limit friendly)

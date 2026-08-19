@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ChevronLeft, CheckCircle2, XCircle, Info } from "lucide-react";
+import { SITE_URL } from "@/lib/research";
 
 export const metadata: Metadata = {
   title: "破壊的変更のポリシー",
   description:
     "L Harness の DB スキーマ変更ポリシー (additive-only) と、破壊的変更を行うときの段階的手順",
+  alternates: { canonical: `${SITE_URL}/updates/migration-policy` },
 };
 
 export default function UpdatesMigrationPolicyPage() {

@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ChevronLeft, AlertCircle, ExternalLink } from "lucide-react";
+import { SITE_URL } from "@/lib/research";
 
 export const metadata: Metadata = {
   title: "アップデートのトラブルシューティング",
   description:
     "L Harness のアップデートが失敗したときの対処、rollback、よくあるエラー",
+  alternates: { canonical: `${SITE_URL}/updates/troubleshooting` },
 };
 
 export default function UpdatesTroubleshootingPage() {

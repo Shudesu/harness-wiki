@@ -18,11 +18,13 @@ import {
   ShieldCheck,
 } from "lucide-react";
 import { ArticleList } from "@/components/article/article-list";
+import { SITE_URL } from "@/lib/research";
 
 export const metadata: Metadata = {
   title: "活用事例",
   description:
     "LINE / X / Instagram Harness で実現できることを具体例で紹介。コピペで再現できる実装例つき。",
+  alternates: { canonical: `${SITE_URL}/use-cases` },
 };
 
 type Product = "line" | "x" | "ig";
