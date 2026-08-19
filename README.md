@@ -21,7 +21,7 @@ pnpm pages:build
 pnpm deploy
 ```
 
-This project has its own `wrangler.toml`, pinned Cloudflare account, and Pages project name (`harness-wiki`). Production deployment is triggered by a push to `main`; GitHub Actions uses the project-specific Cloudflare credential. Run local commands from this directory so no other Harness Wrangler configuration is rewritten.
+This project has its own `wrangler.toml` and Pages project name (`harness-wiki`). Production deployment is triggered by a push to `main`; GitHub Actions pins the Cloudflare account ID and uses the project-specific credential. Run local commands from this directory so no other Harness Wrangler configuration is rewritten.
 
 ## Search and AI discovery
 
