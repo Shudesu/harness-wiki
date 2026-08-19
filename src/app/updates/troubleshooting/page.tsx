@@ -5,7 +5,7 @@ import { ChevronLeft, AlertCircle, ExternalLink } from "lucide-react";
 export const metadata: Metadata = {
   title: "アップデートのトラブルシューティング",
   description:
-    "LINE Harness のアップデートが失敗したときの対処、rollback、よくあるエラー",
+    "L Harness のアップデートが失敗したときの対処、rollback、よくあるエラー",
 };
 
 export default function UpdatesTroubleshootingPage() {

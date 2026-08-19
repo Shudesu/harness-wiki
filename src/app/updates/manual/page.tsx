@@ -5,7 +5,7 @@ import { ChevronLeft, AlertTriangle, GitBranch, Terminal } from "lucide-react";
 export const metadata: Metadata = {
   title: "手動アップデート (改造済みユーザー向け)",
   description:
-    "LINE Harness を改造 (fork) して使っている人向けの手動アップデート手順",
+    "L Harness を改造 (fork) して使っている人向けの手動アップデート手順",
 };
 
 export default function UpdatesManualPage() {
@@ -50,7 +50,7 @@ export default function UpdatesManualPage() {
         <h1>手動アップデート (改造済みユーザー向け)</h1>
 
         <p>
-          このページは、LINE Harness のコードを<strong>自分で書き換えている人</strong>
+          このページは、L Harness のコードを<strong>自分で書き換えている人</strong>
           (いわゆる fork ユーザー) 向けです。改造していない場合は、
           <Link href="/updates">アップデートのトップページ</Link>
           に書かれている自動アップデート手順を使ってください。

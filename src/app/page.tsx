@@ -1,9 +1,15 @@
 import Link from "next/link";
-import { MessageCircle, Repeat2, Send, ArrowRight, Zap } from "lucide-react";
+import type { Metadata } from "next";
+import { MessageCircle, Repeat2, Send, ArrowRight, Zap, Microscope } from "lucide-react";
+import { SITE_URL } from "@/lib/research";
+
+export const metadata: Metadata = {
+  alternates: { canonical: SITE_URL },
+};
 
 const products = [
   {
-    name: "LINE",
+    name: "L",
     href: "/line",
     icon: MessageCircle,
     accent: "from-green-400 to-emerald-600",
@@ -39,7 +45,7 @@ const products = [
 
 export default function Home() {
   return (
-    <div className="noise-bg gradient-mesh relative -mt-20 flex h-dvh flex-col items-center justify-center gap-8 px-4 pt-20">
+    <div className="noise-bg gradient-mesh relative -mt-20 flex min-h-dvh flex-col items-center justify-center gap-8 px-4 py-24">
       {/* Hero — 1行 */}
       <div className="animate-reveal animate-reveal-1 flex flex-col items-center gap-3 text-center">
         <h1 className="whitespace-nowrap text-4xl font-extrabold tracking-tight sm:text-6xl">
@@ -48,9 +54,20 @@ export default function Home() {
           </span>
         </h1>
         <p className="text-sm text-zinc-400 sm:text-base">
-          LINE・X・Instagram をオープンソースで。サーバー代ゼロ。
+          LINE・X・Instagramの運用をオープンソースで。実装根拠まで公開。
         </p>
       </div>
+
+      <Link
+        href="/research"
+        className="animate-reveal animate-reveal-4 group flex w-full max-w-2xl items-center justify-between rounded-xl border border-cyan-500/20 bg-cyan-500/5 px-5 py-4 transition-colors hover:border-cyan-400/50"
+      >
+        <span className="flex items-center gap-3">
+          <Microscope size={18} className="text-cyan-400" />
+          <span><span className="block text-sm font-bold text-zinc-100">一次技術資料30本</span><span className="text-xs text-zinc-500">固定Gitコミットから検証したResearch横断索引</span></span>
+        </span>
+        <ArrowRight size={15} className="text-cyan-400 transition-transform group-hover:translate-x-1" />
+      </Link>
 
       {/* はじめての方 — 最も目立つ位置 */}
       <Link
@@ -92,7 +109,7 @@ export default function Home() {
       </div>
 
       {/* Footer badge */}
-      <div className="animate-reveal animate-reveal-4 flex items-center gap-1.5 text-[11px] text-zinc-600">
+      <div className="animate-reveal flex items-center gap-1.5 text-[11px] text-zinc-600">
         <Zap size={10} className="text-amber-500" />
         100% オープンソース — Cloudflare無料枠で動作
       </div>

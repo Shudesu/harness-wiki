@@ -5,7 +5,7 @@ import { ChevronLeft, ShieldCheck, KeyRound, AlertTriangle } from "lucide-react"
 export const metadata: Metadata = {
   title: "CF API トークンの作り方",
   description:
-    "LINE Harness のダッシュボードからアップデートを実行するための Cloudflare API トークンの作成手順",
+    "L Harness のダッシュボードからアップデートを実行するための Cloudflare API トークンの作成手順",
 };
 
 export default function UpdatesApiTokenPage() {

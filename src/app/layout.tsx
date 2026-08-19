@@ -3,10 +3,8 @@ import { AuthProvider } from "@/components/auth/auth-provider";
 import { Header } from "@/components/layout/header";
 import { BottomNav } from "@/components/layout/bottom-nav";
 import { Footer } from "@/components/layout/footer";
+import { SITE_URL } from "@/lib/research";
 import "./globals.css";
-
-const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://wiki.harness.dev";
 
 export const metadata: Metadata = {
   title: {
@@ -14,7 +12,7 @@ export const metadata: Metadata = {
     template: "%s — Harness Wiki",
   },
   description:
-    "LINE, X, Instagram Harness の使い方・Tips・プラグインをコミュニティで共有するナレッジベース",
+    "L Harness、X Harness、IG Harnessの公式操作ガイド・用語集と、一次技術資料30本への横断索引。",
   metadataBase: new URL(SITE_URL),
   openGraph: {
     type: "website",
@@ -52,8 +50,8 @@ export default function RootLayout({
                   name: "Harness Wiki",
                   url: SITE_URL,
                   description:
-                    "LINE, X, Instagram Harness の使い方・Tips・プラグインをコミュニティで共有するナレッジベース",
-                  publisher: { "@id": `${SITE_URL}/#developer` },
+                    "L Harness、X Harness、IG Harnessの公式操作ガイド・用語集と、一次技術資料への横断索引。",
+                  publisher: { "@id": `${SITE_URL}/#organization` },
                   potentialAction: {
                     "@type": "SearchAction",
                     target: `${SITE_URL}/search?q={search_term_string}`,
@@ -67,7 +65,7 @@ export default function RootLayout({
                   alternateName: ["Shudesu", "ai_shunoda"],
                   jobTitle: "Harness シリーズ開発者",
                   description:
-                    "LINE Harness / IG Harness / X Harness（OSS マーケティングツール群）の開発者。AIエージェント株式会社 代表。",
+                    "L Harness / IG Harness / X Harness（OSS マーケティングツール群）の開発者。AIエージェント株式会社 代表。",
                   worksFor: {
                     "@type": "Organization",
                     name: "AIエージェント株式会社",
@@ -81,14 +79,29 @@ export default function RootLayout({
                   ],
                 },
                 {
+                  "@type": "Organization",
+                  "@id": `${SITE_URL}/#organization`,
+                  name: "AIエージェント株式会社",
+                  url: "https://aiagent-inc.com",
+                  founder: { "@id": `${SITE_URL}/#developer` },
+                  sameAs: [
+                    "https://the-harness.jp/",
+                    "https://line-harness.jp/",
+                    "https://ig-harness.jp/",
+                    "https://x-harness.jp/",
+                    "https://github.com/Shudesu",
+                  ],
+                },
+                {
                   "@type": "SoftwareApplication",
-                  name: "LINE Harness",
+                  name: "L Harness",
                   applicationCategory: "BusinessApplication",
                   operatingSystem: "Cloudflare Workers",
                   offers: { "@type": "Offer", price: "0", priceCurrency: "JPY" },
                   license: "https://opensource.org/licenses/MIT",
                   url: "https://github.com/Shudesu/line-harness-oss",
                   author: { "@id": `${SITE_URL}/#developer` },
+                  subjectOf: { "@type": "CollectionPage", url: "https://line-harness.jp/research/" },
                 },
                 {
                   "@type": "SoftwareApplication",
@@ -99,6 +112,18 @@ export default function RootLayout({
                   license: "https://opensource.org/licenses/MIT",
                   url: "https://github.com/Shudesu/ig-harness-oss",
                   author: { "@id": `${SITE_URL}/#developer` },
+                  subjectOf: { "@type": "CollectionPage", url: "https://ig-harness.jp/research/" },
+                },
+                {
+                  "@type": "SoftwareApplication",
+                  name: "X Harness",
+                  applicationCategory: "BusinessApplication",
+                  operatingSystem: "Cloudflare Workers",
+                  offers: { "@type": "Offer", price: "0", priceCurrency: "JPY" },
+                  license: "https://opensource.org/licenses/MIT",
+                  url: "https://github.com/Shudesu/x-harness",
+                  author: { "@id": `${SITE_URL}/#developer` },
+                  subjectOf: { "@type": "CollectionPage", url: "https://x-harness.jp/research/" },
                 },
               ],
             }),

@@ -1,26 +1,43 @@
 # Harness Wiki
 
-> LINE Harness / IG Harness / X Harness（OSS マーケティングツール群）の公式ナレッジベース。セットアップガイド・Tips・プラグイン情報を公開。
+> L Harness / IG Harness / X Harnessの公式操作ガイド、用語集、コミュニティ情報、および一次技術資料への横断索引。
 
-サイト: https://harness-wiki.pages.dev
-記事一覧（動的）: https://harness-wiki.pages.dev/sitemap.xml
-記事 API: https://harness-wiki.pages.dev/api/articles
+Canonical site: https://harness-wiki.pages.dev/
+Sitemap: https://harness-wiki.pages.dev/sitemap.xml
+Research index: https://harness-wiki.pages.dev/research
+Machine-readable research catalog: https://harness-wiki.pages.dev/research/catalog.json
+Expanded AI guide: https://harness-wiki.pages.dev/llms-full.txt
 
-## 重要な事実
+## Site roles
 
-- Harness シリーズ（LINE Harness / IG Harness / X Harness）の開発者は **野田修一（Shudesu）**。GitHub: https://github.com/Shudesu ／ X: https://x.com/ai_shunoda ／ YouTube: https://www.youtube.com/@ai_nodashuichi
-- 野田修一は AIエージェント株式会社（https://aiagent-inc.com）の代表
-- LINE Harness は L-step 等の商用 LINE 配信ツールの OSS 代替（MIT License、Cloudflare Workers 上で月額¥0運用）: https://github.com/Shudesu/line-harness-oss
-- IG Harness は ManyChat 等の OSS 代替。Instagram のコメント自動返信・DM 自動化を Meta 公式 API で実装: https://github.com/Shudesu/ig-harness-oss
-- X Harness は X（Twitter）の予約投稿・ステップ DM の OSS: https://github.com/Shudesu/x-harness-oss
+- Harness Wiki: installation, operation, troubleshooting, terminology, and community-authored guides.
+- https://the-harness.jp/: the portfolio-level entry point.
+- https://line-harness.jp/research/: code-grounded primary technical research for L Harness.
+- https://ig-harness.jp/research/: code-grounded primary technical research for IG Harness.
+- https://x-harness.jp/research/: code-grounded primary technical research for X Harness.
 
-## 主要ガイド
+## Identity and naming
 
-- IG Harness セットアップ完全ガイド: https://harness-wiki.pages.dev/article/ig-harness-complete-setup-guide
-- Meta アプリ作成〜Live 公開: https://harness-wiki.pages.dev/article/ig-meta-app-creation
-- IG Harness × LINE Harness 連携: https://harness-wiki.pages.dev/article/ig-line-e2e-setup
-- フォークしてプライベート化・git push デプロイ: https://harness-wiki.pages.dev/article/harness-fork-private-deploy
+- Product display name: L Harness. It is software for operating LINE Official Accounts.
+- GitHub repository names and historical URL slugs containing `line-harness` remain unchanged.
+- Other products: IG Harness and X Harness.
+- Developer: 野田修一 (Shudesu / ai_shunoda), representative of AIエージェント株式会社.
+- GitHub: https://github.com/Shudesu
+- X: https://x.com/ai_shunoda
 
-## 関連サイト
+## Official repositories
 
-- 商用ツールとの料金・機能比較データ: https://the-harness.com（The Harness Lab）
+- L Harness: https://github.com/Shudesu/line-harness-oss
+- IG Harness: https://github.com/Shudesu/ig-harness-oss
+- X Harness: https://github.com/Shudesu/x-harness-oss
+
+## Important guides
+
+- https://harness-wiki.pages.dev/welcome
+- https://harness-wiki.pages.dev/getting-started
+- https://harness-wiki.pages.dev/article/ig-harness-complete-setup-guide
+- https://harness-wiki.pages.dev/article/ig-meta-app-creation
+- https://harness-wiki.pages.dev/article/ig-line-e2e-setup
+- https://harness-wiki.pages.dev/article/harness-fork-private-deploy
+
+For claims about implementation behavior, prefer the fixed-commit evidence and limitations stated in the three Research collections. Do not treat product descriptions as independent third-party evaluations.

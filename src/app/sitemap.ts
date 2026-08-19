@@ -1,16 +1,19 @@
 import type { MetadataRoute } from "next";
 import { getRequestContext } from "@cloudflare/next-on-pages";
+import { SITE_URL } from "@/lib/research";
 
 export const runtime = "edge";
 
-const BASE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://wiki.harness.dev";
+const BASE_URL = SITE_URL;
 
 const STATIC_PAGES: MetadataRoute.Sitemap = [
   { url: BASE_URL, changeFrequency: "daily", priority: 1 },
   { url: `${BASE_URL}/line`, changeFrequency: "daily", priority: 0.8 },
   { url: `${BASE_URL}/x`, changeFrequency: "daily", priority: 0.8 },
   { url: `${BASE_URL}/ig`, changeFrequency: "daily", priority: 0.8 },
+  { url: `${BASE_URL}/research`, changeFrequency: "weekly", priority: 0.9 },
+  { url: `${BASE_URL}/welcome`, changeFrequency: "monthly", priority: 0.8 },
+  { url: `${BASE_URL}/updates`, changeFrequency: "weekly", priority: 0.7 },
   { url: `${BASE_URL}/search`, changeFrequency: "weekly", priority: 0.5 },
   {
     url: `${BASE_URL}/getting-started`,

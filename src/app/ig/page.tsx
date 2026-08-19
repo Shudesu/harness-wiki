@@ -5,6 +5,7 @@ import { Sidebar } from "@/components/layout/sidebar";
 export const metadata: Metadata = {
   title: "IG Harness",
   description: "IG Harness の使い方・Tips・DM自動化情報",
+  alternates: { canonical: "https://harness-wiki.pages.dev/ig" },
 };
 
 export default function IgPage() {
@@ -17,6 +18,7 @@ export default function IgPage() {
           <p className="mt-2 text-zinc-400">
             Instagram DM自動化。コメントトリガー・エンゲージメントゲート。
           </p>
+          <a href="https://ig-harness.jp/research/" className="mt-3 inline-block text-sm text-cyan-400 hover:text-cyan-300">実装を検証した一次技術資料を見る →</a>
         </div>
         <DocsContents product="ig" />
       </div>

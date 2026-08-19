@@ -7,7 +7,7 @@ import { MarkdownEditor } from "@/components/editor/markdown-editor";
 import type { Product, Category } from "@/types";
 
 const products: { value: Product; label: string }[] = [
-  { value: "line", label: "LINE Harness" },
+  { value: "line", label: "L Harness" },
   { value: "x", label: "X Harness" },
   { value: "ig", label: "IG Harness" },
   { value: "all", label: "全般" },

@@ -14,9 +14,9 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "LINE Harness のアップデート",
+  title: "L Harness のアップデート",
   description:
-    "LINE Harness を最新版にアップデートする方法・トラブル時の対処・破壊的変更のポリシー",
+    "L Harness を最新版にアップデートする方法・トラブル時の対処・破壊的変更のポリシー",
 };
 
 // Revalidate every hour (GitHub API rate limit friendly)
@@ -27,7 +27,7 @@ const REPOS = [
     key: "line",
     owner: "Shudesu",
     name: "line-harness-oss",
-    label: "LINE Harness",
+    label: "L Harness",
     accent: "text-green-400",
     border: "border-green-500/30",
   },
@@ -160,7 +160,7 @@ export default async function UpdatesPage() {
     <div className="mx-auto max-w-5xl px-4 pb-20">
       {/* Hero */}
       <div className="mb-10">
-        <h1 className="text-3xl font-bold">LINE Harness のアップデート</h1>
+        <h1 className="text-3xl font-bold">L Harness のアップデート</h1>
         <p className="mt-3 text-zinc-400">
           line-harness は<strong className="text-zinc-200">1 クリックでアップデート</strong>
           できます。改造していない通常のインストールなら、管理画面のバナーから

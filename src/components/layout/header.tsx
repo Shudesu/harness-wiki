@@ -8,6 +8,7 @@ const productTabs = [
   { label: "LINE", href: "/line", color: "hover:text-green-400" },
   { label: "X", href: "/x", color: "hover:text-blue-400" },
   { label: "IG", href: "/ig", color: "hover:text-pink-400" },
+  { label: "Research", href: "/research", color: "hover:text-cyan-400" },
   { label: "掲示板", href: "/community", color: "hover:text-amber-400" },
   { label: "アップデート", href: "/updates", color: "hover:text-cyan-400" },
 ] as const;

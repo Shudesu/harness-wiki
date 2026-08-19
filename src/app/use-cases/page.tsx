@@ -50,7 +50,7 @@ const productMeta: Record<
   }
 > = {
   line: {
-    name: "LINE Harness",
+    name: "L Harness",
     href: "/line",
     icon: MessageCircle,
     accent: "from-green-400 to-emerald-600",
@@ -179,7 +179,7 @@ const cases: Record<Product, UseCase[]> = {
       outcome: "アルゴリズム変更にも左右されない収益基盤を構築。",
       steps: [
         "ゲート達成DMに LINE 友だち追加URL を設置",
-        "LINE Harness 側でステップ配信を起動",
+        "L Harness 側でステップ配信を起動",
         "クロスチャネルの CV をトラッキング",
       ],
     },
@@ -229,7 +229,7 @@ const cases: Record<Product, UseCase[]> = {
         "IG → LINE / IG → X の送客でチャネルを横断した運用。",
       outcome: "プラットフォームBANリスクの分散と、複線化された収益。",
       steps: [
-        "IG Harness の DM に LINE Harness 友だち追加 URL を設置",
+        "IG Harness の DM に L Harness 友だち追加 URL を設置",
         "LIFF で UUID を引き継いでパーソナライズ配信",
         "横断ファネルをダッシュボードで確認",
       ],

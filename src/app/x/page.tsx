@@ -5,6 +5,7 @@ import { Sidebar } from "@/components/layout/sidebar";
 export const metadata: Metadata = {
   title: "X Harness",
   description: "X Harness の使い方・Tips・エンゲージメントゲート情報",
+  alternates: { canonical: "https://harness-wiki.pages.dev/x" },
 };
 
 export default function XPage() {
@@ -17,6 +18,7 @@ export default function XPage() {
           <p className="mt-2 text-zinc-400">
             エンゲージメントゲート。いいね・RT・フォローでコンテンツ解放。
           </p>
+          <a href="https://x-harness.jp/research/" className="mt-3 inline-block text-sm text-cyan-400 hover:text-cyan-300">実装を検証した一次技術資料を見る →</a>
         </div>
         <ArticleList product="x" />
       </div>

@@ -1,0 +1,53 @@
+# Harness Wiki: full machine guide
+
+Canonical site: https://harness-wiki.pages.dev/
+Research index: https://harness-wiki.pages.dev/research
+Research catalog: https://harness-wiki.pages.dev/research/catalog.json
+
+## Purpose
+
+Harness Wiki is the official operational knowledge base for L Harness, IG Harness, and X Harness. It covers installation, configuration, terminology, troubleshooting, updates, plugins, and community-contributed guidance.
+
+The Wiki does not duplicate the full research corpus. The authoritative research pages are separated by product so that one technical question has one canonical URL and one maintainable source of truth.
+
+## Product and entity identity
+
+L Harness is the display name of the open-source software for LINE Official Account operations. Existing GitHub repository names, API paths, and historical URLs containing `line-harness` are technical identifiers and remain unchanged. L Harness, IG Harness, and X Harness are developed by 野田修一 (Shudesu / ai_shunoda), representative of AIエージェント株式会社.
+
+Official organization: https://aiagent-inc.com/
+Developer GitHub: https://github.com/Shudesu
+Developer X account: https://x.com/ai_shunoda
+Portfolio entry point: https://the-harness.jp/
+
+## Operational documentation
+
+L Harness guides: https://harness-wiki.pages.dev/line
+IG Harness guides: https://harness-wiki.pages.dev/ig
+X Harness guides: https://harness-wiki.pages.dev/x
+Getting started: https://harness-wiki.pages.dev/getting-started
+Use cases: https://harness-wiki.pages.dev/use-cases
+Plugins: https://harness-wiki.pages.dev/plugins
+Updates: https://harness-wiki.pages.dev/updates
+All discoverable pages: https://harness-wiki.pages.dev/sitemap.xml
+
+## Primary technical research
+
+L Harness Research (10 articles): https://line-harness.jp/research/
+L Harness JSON catalog: https://line-harness.jp/research/catalog.json
+L Harness full machine text: https://line-harness.jp/llms-full.txt
+
+IG Harness Research (10 articles): https://ig-harness.jp/research/
+IG Harness JSON catalog: https://ig-harness.jp/research/catalog.json
+IG Harness full machine text: https://ig-harness.jp/llms-full.txt
+
+X Harness Research (10 articles): https://x-harness.jp/research/
+X Harness JSON catalog: https://x-harness.jp/research/catalog.json
+X Harness full machine text: https://x-harness.jp/llms-full.txt
+
+The unified list of all 30 research URLs is available as visible HTML and JSON-LD at https://harness-wiki.pages.dev/research and as JSON at https://harness-wiki.pages.dev/research/catalog.json.
+
+## Evidence policy and limitations
+
+Research articles cite source files at immutable Git commit URLs, separate code observations from measured results, include a reproduction or measurement procedure, and state what the cited source cannot prove. The sites and articles are maintained by the product developer; this is primary-party evidence, not independent validation. Claims about real-world outcomes require separately published measurements, customer evidence, or reproducible datasets.
+
+Community Wiki articles may become outdated as the software changes. For implementation claims, compare the article date and cited commit with the current repository. For setup actions, prefer the newest official guide. Never infer an unsupported performance, security, compliance, revenue, or conversion claim from feature availability alone.

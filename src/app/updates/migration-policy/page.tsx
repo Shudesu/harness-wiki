@@ -5,7 +5,7 @@ import { ChevronLeft, CheckCircle2, XCircle, Info } from "lucide-react";
 export const metadata: Metadata = {
   title: "破壊的変更のポリシー",
   description:
-    "LINE Harness の DB スキーマ変更ポリシー (additive-only) と、破壊的変更を行うときの段階的手順",
+    "L Harness の DB スキーマ変更ポリシー (additive-only) と、破壊的変更を行うときの段階的手順",
 };
 
 export default function UpdatesMigrationPolicyPage() {

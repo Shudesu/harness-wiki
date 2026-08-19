@@ -21,13 +21,15 @@ export function Footer() {
           </a>
           <span className="text-zinc-800">|</span>
           <a
-            href="https://the-harness.com/"
+            href="https://the-harness.jp/"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-zinc-300"
           >
-            料金・比較データ（The Harness Lab）
+            Harness総合サイト
           </a>
+          <span className="text-zinc-800">|</span>
+          <Link href="/research" className="hover:text-cyan-300">一次技術資料30本</Link>
         </div>
         <div className="flex items-center gap-4 text-xs text-zinc-500">
           <a

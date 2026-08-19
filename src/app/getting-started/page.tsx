@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 const products = [
   {
-    name: "LINE Harness",
+    name: "L Harness",
     href: "/line",
     description:
       "Lステップ/Utage代替。シナリオ配信・タグ管理・リッチメニュー。",

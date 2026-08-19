@@ -8,6 +8,7 @@
     "pages:build": "npx @cloudflare/next-on-pages",
     "preview": "pnpm pages:build && npx wrangler pages dev .vercel/output/static",
     "deploy": "pnpm pages:build && npx wrangler pages deploy .vercel/output/static --project-name harness-wiki",
+    "notify:indexnow": "node scripts/notify-indexnow.mjs",
     "lint": "next lint",
     "db:migrate": "npx wrangler d1 execute harness-wiki --file=schema.sql",
     "db:migrate:local": "npx wrangler d1 execute harness-wiki --local --file=schema.sql"
