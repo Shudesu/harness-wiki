@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { ArrowUpRight, Database, FileText } from "lucide-react";
-import { researchArticles, researchCollections, SITE_URL } from "@/lib/research";
+import { HARNESS_BRAND_ID, researchArticles, researchCollections, SITE_URL } from "@/lib/research";
 
 export const metadata: Metadata = {
   title: "Harness Research 横断索引",
@@ -16,6 +16,7 @@ export default function ResearchPage() {
     name: "Harness Research 横断索引",
     url: `${SITE_URL}/research`,
     description: metadata.description,
+    about: { "@id": HARNESS_BRAND_ID },
     mainEntity: {
       "@type": "ItemList",
       numberOfItems: researchArticles.length,

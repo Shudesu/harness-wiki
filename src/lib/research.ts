@@ -1,4 +1,12 @@
 export const SITE_URL = "https://harness-wiki.pages.dev";
+export const ORGANIZATION_ID = "https://aiagent-inc.com/#organization";
+export const PERSON_ID = "https://the-harness.com/noda-shuichi/#person";
+export const HARNESS_BRAND_ID = "https://the-harness.com/harness/#brand";
+export const PRODUCT_ENTITY_IDS = {
+  "L Harness": "https://the-harness.com/harness/#l-harness",
+  "IG Harness": "https://the-harness.com/harness/#ig-harness",
+  "X Harness": "https://the-harness.com/harness/#x-harness",
+} as const;
 
 export type ResearchCollection = {
   product: "L Harness" | "IG Harness" | "X Harness";

@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { researchArticles, researchCollections, SITE_URL } from "@/lib/research";
+import { HARNESS_BRAND_ID, ORGANIZATION_ID, researchArticles, researchCollections, SITE_URL } from "@/lib/research";
 
 export const runtime = "edge";
 
@@ -12,6 +12,8 @@ export function GET() {
       name: "Harness Research 横断カタログ",
       url: `${SITE_URL}/research/`,
       description: "L Harness、IG Harness、X Harnessの一次技術資料30本を発見するための横断カタログ。本文の正本は各.jpドメインにあります。",
+      creator: { "@id": ORGANIZATION_ID },
+      about: { "@id": HARNESS_BRAND_ID },
       numberOfItems: researchArticles.length,
       dataset: researchCollections.map((collection) => ({
         "@type": "Dataset",

@@ -14,6 +14,15 @@ The Wiki does not duplicate the full research corpus. The authoritative research
 
 L Harness is the display name of the open-source software for LINE Official Account operations. Existing GitHub repository names, API paths, and historical URLs containing `line-harness` are technical identifiers and remain unchanged. L Harness, IG Harness, and X Harness are developed by 野田修一 (Shudesu / ai_shunoda), representative of AIエージェント株式会社.
 
+Canonical entity identifiers used consistently across the official sites:
+
+Harness brand: https://the-harness.com/harness/#brand
+Developer: https://the-harness.com/noda-shuichi/#person
+Operating company: https://aiagent-inc.com/#organization
+L Harness: https://the-harness.com/harness/#l-harness
+IG Harness: https://the-harness.com/harness/#ig-harness
+X Harness: https://the-harness.com/harness/#x-harness
+
 Official organization: https://aiagent-inc.com/
 Developer GitHub: https://github.com/Shudesu
 Developer X account: https://x.com/ai_shunoda

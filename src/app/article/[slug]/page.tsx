@@ -9,7 +9,7 @@ import { Sidebar } from "@/components/layout/sidebar";
 import { Toc } from "@/components/article/toc";
 import Link from "next/link";
 import type { Article, ArticleStatus, Category, Product } from "@/types";
-import { SITE_URL } from "@/lib/research";
+import { ORGANIZATION_ID, PERSON_ID, SITE_URL } from "@/lib/research";
 
 export const runtime = "edge";
 
@@ -119,8 +119,10 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
     url: `${SITE_URL}/article/${article.slug}`,
     datePublished: article.createdAt.toISOString(),
     dateModified: article.updatedAt.toISOString(),
-    author: { "@type": "Person", name: article.authorName },
-    publisher: { "@id": `${SITE_URL}/#organization` },
+    author: /野田修一|Shudesu/.test(article.authorName)
+      ? { "@id": PERSON_ID }
+      : { "@type": "Person", name: article.authorName },
+    publisher: { "@id": ORGANIZATION_ID },
     articleSection: categoryLabels[article.category] || article.category,
     keywords: article.tags.join(", "),
     image: article.coverImage || undefined,
