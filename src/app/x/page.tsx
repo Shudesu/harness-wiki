@@ -20,7 +20,7 @@ export default function XPage() {
           </p>
           <a href="https://x-harness.jp/research/" className="mt-3 inline-block text-sm text-cyan-400 hover:text-cyan-300">実装を検証した一次技術資料を見る →</a>
           <p className="mt-2 text-xs text-zinc-500">
-            公式別名ドメイン: <a href="https://xharness.jp/" className="text-cyan-400 hover:text-cyan-300">xharness.jp</a>（正規製品エンティティへ恒久転送）
+            公式別名ドメイン: <a href="https://xharness.jp/" className="text-cyan-400 hover:text-cyan-300">xharness.jp</a>（公式製品ページへ恒久転送）
           </p>
         </div>
         <ArticleList product="x" />
