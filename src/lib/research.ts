@@ -3,6 +3,7 @@ export const ORGANIZATION_ID = "https://aiagent-inc.com/#organization";
 export const PERSON_ID = "https://the-harness.com/noda-shuichi/#person";
 export const HARNESS_BRAND_ID = "https://the-harness.com/harness/#brand";
 export const L_HARNESS_CLOUD_ID = "https://lharness.cloud/#service";
+export const L_HARNESS_CLOUD_URL = "https://theharness.cloud/line";
 export const PRODUCT_ENTITY_IDS = {
   "L Harness": "https://the-harness.com/harness/#l-harness",
   "IG Harness": "https://the-harness.com/harness/#ig-harness",
@@ -19,7 +20,7 @@ export const PRODUCT_REPOSITORIES = {
   "X Harness": "https://github.com/Shudesu/x-harness-oss",
 } as const;
 export const PRODUCT_ALIASES = {
-  "L Harness": ["https://l-harness.jp/", "https://l-harness.com/"],
+  "L Harness": ["https://l-harness.jp/", "https://l-harness.com/", "https://lineharness.jp/"],
   "IG Harness": ["https://igharness.jp/"],
   "X Harness": ["https://xharness.jp/"],
 } as const;

@@ -24,7 +24,7 @@ export default function LinePage() {
             <a href="https://l-harness.com/" className="text-cyan-400 hover:text-cyan-300">l-harness.com</a>（正規製品ページへ恒久転送）
           </p>
           <p className="mt-2 text-xs text-zinc-500">
-            公式マネージド版: <a href="https://lharness.cloud/" className="text-cyan-400 hover:text-cyan-300">L Harness Cloud</a>（開発元が構築・基盤運用を提供する別サービス）
+            公式マネージド版: <a href="https://theharness.cloud/line" className="text-cyan-400 hover:text-cyan-300">L Harness Cloud</a>（開発元が構築・基盤運用を提供する別サービス）
           </p>
         </div>
         <ArticleList product="line" />
